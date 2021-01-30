@@ -1,19 +1,21 @@
-const {getHomePage, getAboutPage, getVacanciesPage, getContactPage, getCareersPage, getResourcesPage} = require("../controllers/shopController.js")
-
+const {getHomePage, getContactPage, getCategoryPage, getSingleProductPage, getCheckoutPage, getConfirmationPage, getCartPage, getBlogPage, getSingleBlogPage, getLoginPage, getRegisterPage, getTrackingOrderPage} = require("../controllers/shopController.js")
 const express = require("express");
-
 const router = express.Router();
 
 router.get("/", getHomePage);
-
-router.get("/about", getAboutPage);
-
-router.get("/vacancies", getVacanciesPage);
-
-router.get("/careers", getCareersPage);
-
 router.get("/contact", getContactPage);
-
-router.get("/resources", getResourcesPage);
+//shop
+router.get("/category", getCategoryPage);
+router.get("/single-product", getSingleProductPage);
+router.get("/checkout", getCheckoutPage);
+router.get("/confirmation", getConfirmationPage);
+router.get("/cart", getCartPage);
+//blog
+router.get("/blog", getBlogPage);
+router.get("/single-blog", getSingleBlogPage);
+//pages
+router.get("/login", getLoginPage);
+router.get("/register", getRegisterPage);
+router.get("/tracking-order", getTrackingOrderPage);
 
 module.exports = router;

@@ -1,6 +1,6 @@
 const { response } = require("express");
 const express = require("express");
-const path = require("path")
+const path = require("path");
 
 //include shop routes
 const shopRoutes = require("./routes/shopRoutes.js");
