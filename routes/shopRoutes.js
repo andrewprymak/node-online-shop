@@ -1,4 +1,4 @@
-const {get404, getHomePage, getContactPage, getCategoryPage, getProduct, getCheckoutPage, getConfirmationPage, getCartPage, getBlogPage, getSingleBlogPage, getLoginPage, getRegisterPage, getTrackingOrderPage} = require("../controllers/shopController.js")
+const {get404, getHomePage, getContactPage, getCategoryPage, getProduct, getCheckoutPage, getConfirmationPage, getCartPage, getBlogPage, getSingleBlogPage, getLoginPage, getRegisterPage, getTrackingOrderPage, getNewProductPage} = require("../controllers/shopController.js")
 const express = require("express");
 const router = express.Router();
 
@@ -17,7 +17,8 @@ router.get("/single-blog", getSingleBlogPage);
 router.get("/login", getLoginPage);
 router.get("/register", getRegisterPage);
 router.get("/tracking-order", getTrackingOrderPage);
-router.get("/products/:productId", getProduct)
+router.get("/products/:productId", getProduct);
+router.get("/add-product", getNewProductPage);
 router.get("*", get404);
 
 module.exports = router;
